@@ -7,9 +7,23 @@ table tr:ntd-child(odd) td {
   background: #cccccc;
 }
 
-/* body {
-  margin: 10px;
-  padding: 10%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-} */
+.writing-mode {
+  background: #ccc;
+  width: 1000px;
+}
+
+.writing-mode-test {
+  background: #aaa;
+  width: 1000px;
+  writing-mode: vertical-rl;
+} 
+
+.btn {
+  background: green;
+  padding: 10px;
+  line-height: 30px;
+}
+
+.btnvertical {
+  writing-mode: vertical-rl;
+}
