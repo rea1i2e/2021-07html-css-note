@@ -27,3 +27,27 @@ table tr:ntd-child(odd) td {
 .btnvertical {
   writing-mode: vertical-rl;
 }
+
+/* ブロークングリッドテスト */
+.test-wrapper {
+  background: #eee;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-wrapper {
+  background: #ccc;
+  width: 500px;
+  height: 300px;
+}
+
+.p-wrapper {
+  background: #bbb;
+  height: 300px;
+}
+
+.p-wrapper500 {
+  width: 500px;
+}

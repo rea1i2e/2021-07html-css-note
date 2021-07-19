@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pタグに関する疑問</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>pタグに関する疑問</h1>
+  pタグの親要素にwidthを指定しないと、隣の要素の幅を圧迫して謎のwidthになる
+  <h2>pタグの親要素にwidth500pxを指定した場合（そのさらに親には1000pxを指定している）</h2>
+  <div class="test-wrapper">
+    <div class="img-wrapper">divタグ幅500px</div>
+    <div class="p-wrapper p-wrapper500">
+      <p>
+        pタグ500px指定あああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
+    </div>
+  </div>
+
+  <h2>pタグの親要素にwidthを指定しない場合（そのさらに親には1000pxを指定している）</h2>
+  <div class="test-wrapper">
+    <div class="img-wrapper">divタグ幅500px(なぜかp要素に圧迫されてwidthの値が小さくなる)</div>
+    <div class="p-wrapper">
+      <p>
+        あああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
+    </div>
+  </div>
+</body>
+</html>
