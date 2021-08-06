@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float sample</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>floatプロパティを使って、要素を横並びにする</h1>
+  <div class="float-box-wrapper">
+    <div class="float-box float-box1">box1</div>
+    <div class="float-box float-box2">box2</div>
+    <div class="float-box float-box3">box3</div>
+  </div>
+  
+  <p>①横並びにしたboxの下に文章を配置しようとしても、listまで横並びになってしまう。</p>
+  <h2  class="float-desc1">clearプロパティでfloatの解除</h2>
+  <p>floatを解除したい要素で、②「clear:left;」とすると、floatが解除される。</p>
+
+  <h2>clearfixでfloatを解除</h2>
+  
+  <ul class="float-ul float-ul1 clearfix">
+    <li class="float-li float-li1">list1</li>
+    <li class="float-li float-li2">list2</li>
+    <li class="float-li float-li3">list3</li>
+  </ul>
+  
+  <ul class="float-ul float-ul2 clearfix">
+    <li class="float-li float-li1">list1</li>
+    <li class="float-li float-li2">list2</li>
+    <li class="float-li float-li3">list3</li>
+  </ul>
+
+  <p>floatを含む親要素に下記のようなclearfixクラスを指定することでfloatを解除できる。</p>
+
+  <div class="code-ex">
+    <pre>
+      .clearfix:after {
+        content: &quot;&quot;;
+        display: block;
+        clear: both;
+      }
+    </pre>
+  </div>
+
+  
+
+</body>
+</html>

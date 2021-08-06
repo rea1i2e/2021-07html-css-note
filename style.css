@@ -29,25 +29,124 @@ table tr:ntd-child(odd) td {
 }
 
 /* ブロークングリッドテスト */
-.test-wrapper {
-  background: #eee;
+.broken-grid {
+  background: #ccc;
   width: 1000px;
   margin: 0 auto;
+}
+
+.broken-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.img-wrapper {
-  background: #ccc;
-  width: 500px;
-  height: 300px;
+.broken-grid > .broken-wrapper:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
-.p-wrapper {
-  background: #bbb;
-  height: 300px;
+.img-box {
+  width: 500px;
+  height: 450px;
+  position: relative;
 }
 
-.p-wrapper500 {
-  width: 500px;
+.img-box img {
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  transform: translateY( -50% );
 }
+
+.broken-grid > .broken-wrapper:nth-child(even)  .img-box img{
+  left: 0
+}
+
+.desc {
+  background: #eee;
+  width: 450px;
+  height: 450px;
+  position: relative;
+}
+
+.desc p {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+}
+
+/* *************************************************
+centering.html
+************************************************* */
+.text-align-wrapper {
+  background: rgb(238, 188, 51);
+  width: 500px;
+  height: 200px;
+  padding: 24px;
+  margin: 12px;
+  text-align: center;
+}
+.vertical-align-wrapper {
+  display: table-cell;
+  background: rgb(238, 188, 51);
+  width: 500px;
+  height: 200px;
+  padding: 24px;
+  margin: 12px;
+  vertical-align: middle;
+}
+
+/* *************************************************
+float.html
+************************************************* */
+
+.float-box {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.float-box1 {
+  background: hsla( 60, 60%, 60%, .5);
+}
+.float-box2 {
+  background: hsla( 120, 60%, 60%, .5);
+}
+.float-box3 {
+  background: hsla( 180, 60%, 60%, .5);
+}
+
+.float-desc1 {
+  clear: left;
+}
+
+.float-ul {
+  list-style:none;
+}
+
+.float-ul1 .float-li {
+  background: hsla( 240, 60%, 60%, .5);
+  float: left;
+  margin-left: 5px;
+}
+
+.float-ul2 .float-li {
+  background: hsla( 300, 60%, 60%, .5);
+  float: left;
+  margin-left: 5px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.code-ex {
+  background: #ddd;
+  width: 200px;
+  padding: 12px;
+}
+
+
+
+
