@@ -147,6 +147,61 @@ float.html
   padding: 12px;
 }
 
+/* *************************************************
+img.html
+************************************************* */
+
+.sample-img01 {
+  width: 200px;
+  height: 200px;
+  background: #ccc;
+}
+
+.img-sample-box {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.img-sample-desc {
+  margin-left: 16px;
+}
+
+.contain-sample {
+  object-fit: contain;
+}
+
+.cover-sample {
+  object-fit: cover;
+}
+
+
+
+/* ***************************************************
+p-width.html
+*************************************************** */
+.w1000px-wrapper {
+  width: 1000px;
+  background: #ccc;
+  display: flex;
+}
+
+.w500px-wrapper {
+  width: 500px;
+  background: #bbb;
+}
+
+.yellow-wrapper {
+  background: yellow;
+}
+
+/* ***************************************************
+#reference
+*************************************************** */
+#reference {
+  min-height: 400px;
+}
+
+
 
 
 
