@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="じゃ">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>img要素</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <h1>img要素に関すること</h1>
+  <a href="index.html">HTML・CSS noteに戻る</a>
+  <section id="object-fit">
+    <h2>CSSでトリミング（object-fit）</h2>
+    <div class="img-sample-box">
+      <img class="sample-img01" src="img/sample-img.png" alt="">
+      <div class="img-sample-desc">
+        <h3>widthとheightだけ指定</h3>
+        <p>元画像の縦横比に関係なく、指定のサイズで表示される</p>
+        <p>元画像の縦横比と指定サイズの縦横比が異なれば、画像は歪む</p>
+      </div>
+    </div>
+
+    <div class="img-sample-box">
+      <img class="sample-img01 contain-sample" src="img/sample-img.png" alt="">
+      <div class="img-sample-desc">
+        <h3>object-fit:contain</h3>
+        <p>要素の縦横比を保ったまま、要素全体が指定のサイズに収まるように表示される
+        </p>
+        <p>要素の幅と高さのうち、短いほうがボックスにフィットし、長いほうははみ出す</p>
+      </div>
+    </div>
+
+    <div class="img-sample-box">
+      <img class="sample-img01 cover-sample" src="img/sample-img.png" alt="">
+      <div class="img-sample-desc">
+        <h3>object-fit:cover</h3>
+        <p>要素の縦横比を保ったまま、指定のサイズを完全に埋めるように調整して表示</p>
+        <p>要素の幅と高さのうち、短いほうがボックスにフィットし、長い方ははみ出して切り取られる</p>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <section id="reference" class="contents-wrapper">
+    <h2>参考URL</h2>
+    <cite>
+      <ul>
+        <li><a href="https://dekiru.net/article/13272/">できるネット　object-fitプロパティの意味と使い方</a></li>
+      </ul>
+    </cite>
+  </section>
+  
+
+
+</body>
+</html>
