@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sample of margin and padding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>marginとpaddingに関するサンプルページ</h1>
+  
+  <section id="inline-element"  class="contents-wrapper">
+    
+    <h2>インライン要素に関すること</h2>
+    <ul>
+      <h3>インライ要素のmargin、paddingは左右のみ指定できる</h3>
+      
+      <li>
+        <h4>aタグに何も指定しない場合（比較対象）</h4>
+        <a href="" class="ex">aタグサンプル（０）</a>
+        <p>検証ツールで確認すると、上下左右のmargin、paddingはいずれも"-"となっている</p>
+      </li>
+      
+      <li>
+        <h4>aタグにmargin:64px;とした場合</h4>
+        <a href="" class="ex margin64px">aタグサンプル（１）</a>
+        <p>検証ツールで確認すると、上下左右のmarginはいずれも"64"となっている。</p>
+        <p>左右には余白が付いているが、上下の余白は上の（０）のサンプルと比較して増えていない</p>
+      </li>
+
+      <li>
+        <h4>aタグにpadding:64px;とした場合</h4>
+        <a href="" class="ex padding64px">aタグサンプル（２）</a>
+        <p>検証ツールで確認すると、上下左右のpaddingはいずれも"64"となっている。</p>
+        <p>marginのときと同様に、左右には余白が付いているが、上下の余白は上の（０）のサンプルと比較して増えていない</p>
+        <p>背景色が上下の要素に重なって広がっている</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="reference" class="contents-wrapper">
+    <h2>参考URL</h2>
+    <cite>
+      <ul>
+        <li><a href="https://web-camp.io/magazine/archives/27339">DMM WEBCAMP MEDIA　CSS【paddingとmarginの使い分け】余白の作り方を徹底解説！</a></li>
+        <li><a href="https://webliker.info/50549/">webliker　paddingとmarginの違いをできる限り難しい言葉を使わず説明してみた</a></li>
+      </ul>
+      
+    </cite>
+  </section>
+  <a  class="" href="https://rea1i2e.github.io/2021-07html-css-note/">HTML・CSS noteへ戻る</a>
+</body>
+</html>

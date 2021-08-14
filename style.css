@@ -1,32 +1,156 @@
-table td {
-  background: #eeeeee;
-  padding: 4px;
+/* ***************************************************
+font.html
+*************************************************** */
+.fixed-area {
+  box-sizing: border-box;
+  position: fixed;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 100%;
+  padding: 0 4%;
 }
 
-table tr:ntd-child(odd) td {
-  background: #cccccc;
+header {
+  /* background: pink; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
 }
 
-.writing-mode {
+nav {
+  width:60%;
+}
+
+nav ul {
+  /* background:olive; */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav li {
+  padding-left: 8px;
+}
+
+/* 文字列の例にデフォルトのフォントサイズを指定 */
+.font-ex {
+  font-size: 3rem;
   background: #ccc;
-  width: 1000px;
 }
 
-.writing-mode-test {
-  background: #aaa;
-  width: 1000px;
-  writing-mode: vertical-rl;
-} 
+.font-px {
+  font-size: 48px;
+  background: #ccc;
+}
 
-.btn {
-  background: green;
-  padding: 10px;
+.font-16px {
+  font-size: 16px;
+  background: #ccc;
+  width: 160px;
+  height: 160px;
+}
+
+.h250px-wrapper {
+  height: 245px;
+  display: flex;
+}
+
+/* #font-family ************************************ */
+
+.font-totsu {
+  /* font-family: '凸版文久見出し明朝'; */
+  font-family: 'Toppan Bunkyu Midashi Mincho';
+}
+
+/* 石井花壇の課題のフォントを適用 */
+.many-font-family {
+  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, 
+“ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
+.font-family-yumincho {
+  font-family: “游明朝体”;
+}
+
+.font-family-times-new-roman {
+  font-family: “Times New Roman”;
+}
+
+.font-family-serif {
+  font-family: “serif”;
+}
+
+.font-family-x {
+  font-family: serif;
+}
+
+/* #font-weight ************************************* */
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw800 {
+  font-weight: 800;
+}
+
+/* #letter-spacing ********************************* */
+
+.ls018 {
+  letter-spacing: .18em;
+}
+
+/* #line-height *********************************** */
+
+.line-height1 {
+  line-height: 1;
+}
+.line-height30px {
+  background: #ccc;
   line-height: 30px;
+  border: 3px solid #000;
 }
 
-.btnvertical {
-  writing-mode: vertical-rl;
+
+/* font.html 終わり ********************************** */
+
+/* ***************************************************
+margin-padding.html
+*************************************************** */
+
+.contents-wrapper {
+  /* margin-top: 400px; */
+  padding: 0 4%;
 }
+
+/* サンプルに背景色を */
+.ex {
+  background: #ccc;
+  opacity: .5;
+}
+
+.margin64px {
+  margin: 64px;
+}
+
+.padding64px {
+  padding: 64px;
+}
+
+/* margin-padding.html 終わり */
+
+/* **************************************************
+css-selector.html
+************************************************** */
+
+/* #last-child *********************************** */
+.last-child01 li:last-child {
+  color: blue;
+}
+
 
 /* ブロークングリッドテスト */
 .broken-grid {
@@ -74,26 +198,46 @@ table tr:ntd-child(odd) td {
   transform: translateY( -50% );
 }
 
+/* **************************************************
+css-selector.html
+************************************************** */
+
+/* #last-child *********************************** */
+.last-child01 li:last-child {
+  color: blue;
+}
+
+/* css-selector.html 終わり */
+
+
 /* *************************************************
-centering.html
+img.html
 ************************************************* */
-.text-align-wrapper {
-  background: rgb(238, 188, 51);
-  width: 500px;
+
+.sample-img01 {
+  width: 200px;
   height: 200px;
-  padding: 24px;
-  margin: 12px;
-  text-align: center;
+  background: #ccc;
 }
-.vertical-align-wrapper {
-  display: table-cell;
-  background: rgb(238, 188, 51);
-  width: 500px;
-  height: 200px;
-  padding: 24px;
-  margin: 12px;
-  vertical-align: middle;
+
+.img-sample-box {
+  display: flex;
+  margin-bottom: 16px;
 }
+
+.img-sample-desc {
+  margin-left: 16px;
+}
+
+.contain-sample {
+  object-fit: contain;
+}
+
+.cover-sample {
+  object-fit: cover;
+}
+
+/* img.html 終わり ******************************* */
 
 /* *************************************************
 float.html
@@ -147,34 +291,61 @@ float.html
   padding: 12px;
 }
 
+/* float.html 終わり **************************** */
+
 /* *************************************************
-img.html
+vscode.html
 ************************************************* */
+table tr:ntd-child(odd) td {
+  background: #cccccc;
+}
 
-.sample-img01 {
-  width: 200px;
-  height: 200px;
+table td {
+  background: #eeeeee;
+  padding: 4px;
+}
+
+.writing-mode {
   background: #ccc;
+  width: 1000px;
 }
 
-.img-sample-box {
-  display: flex;
-  margin-bottom: 16px;
+.writing-mode-test {
+  background: #aaa;
+  width: 1000px;
+  writing-mode: vertical-rl;
+} 
+
+.btn {
+  background: green;
+  padding: 10px;
+  line-height: 30px;
 }
 
-.img-sample-desc {
-  margin-left: 16px;
+.btnvertical {
+  writing-mode: vertical-rl;
 }
 
-.contain-sample {
-  object-fit: contain;
+/* *************************************************
+centering.html
+************************************************* */
+.text-align-wrapper {
+  background: rgb(238, 188, 51);
+  width: 500px;
+  height: 200px;
+  padding: 24px;
+  margin: 12px;
+  text-align: center;
 }
-
-.cover-sample {
-  object-fit: cover;
+.vertical-align-wrapper {
+  display: table-cell;
+  background: rgb(238, 188, 51);
+  width: 500px;
+  height: 200px;
+  padding: 24px;
+  margin: 12px;
+  vertical-align: middle;
 }
-
-
 
 /* ***************************************************
 p-width.html
@@ -194,9 +365,8 @@ p-width.html
   background: yellow;
 }
 
-/* ***************************************************
-#reference
-*************************************************** */
+
+/* #reference ************************************* */
 #reference {
   min-height: 400px;
 }

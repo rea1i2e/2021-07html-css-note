@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Sample</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="fixed-area">
+
+    <header>
+      <h1><a href="#">fontに関するテストページ</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#font-size">font-size</a></li>
+          <li><a href="#font-family">font-family</a></li>
+          <li><a href="#font-weight">font-weight</a></li>
+          <li><a href="#letter-spacing">letter-spacing</a></li>
+          <li><a href="#line-height">line-height</a></li>
+          <li><a href="#reference">reference</a></li>
+          <li><a href="https://rea1i2e.github.io/2021-07html-css-note/">HTML・CSS noteに戻る</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <p>このページは、fontに関するテストをするためのページです。</p>
+    
+  </div><!-- /.fixed-area -->
+  
+  <section id="page-desc"  class="contents-wrapper">
+    <h2>見本テキスト</h2>
+    <dl>
+      
+    </dl>
+  </section>
+
+  <section id="font-size" class="contents-wrapper">
+
+    <h2>font-size</h2>
+    <dl>
+      <dt>remで指定</dt>
+      <dd class="font-ex">石井花壇（０）</dd>
+      <dd>上記のfont-sizeは、htmlのfont-sizeを100%とした上で3remと指定しています。</dd>
+
+      <dt>pxで指定</dt>
+      <dd class="font-px">石井花壇（８）</dd>
+      <dd>上記のfont-sizeは、48pxで指定。ブラウザの設定によらず、サイズが固定される。</dd>
+
+      <dt>幅160px高さ160pxのdiv内にfont-size16pxの「あ」を敷き詰めるとどうなるか実験</dt>
+      <div class="h250px-wrapper">
+        <dd>
+          <div class="font-16px">
+            あああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああい
+          </div>
+        </dd>
+        <dd>「あ」の文字列の10番目だけに「い」を入れている。幅はちょうど良いが、高さは行間分はみ出している。</dd>
+      </div><!-- .font-16px -->
+    </dl>
+  </section>
+
+  <section id="font-family" class="contents-wrapper">
+    <h2>font-family</h2>
+    <dl>
+      <dt>font-family指定なし</dt>
+      <dd class="font-ex">石井花壇（０）</dd>
+      <dd>上記を見本テキストとして、これにいろいろな指定をしていきます。
+      </dd>
+
+      <dt>凸版文久見出し明朝</dt>
+      <dd class="font-ex font-totsu">石井花壇（１）</dd>
+      <dd>上記は、「凸版文久見出し明朝」の例です。
+      </dd>
+   
+      <dt>font-familyによる文字の横幅の違いを検証（指定なし）</dt>
+      <dd class="font-ex">12345678910</dd>
+      <dd>上記はfont-family指定なし</dd>
+
+      <dt>font-familyによる文字の横幅の違いを検証（たくさんのフォントを指定）</dt>
+      <dd class="font-ex many-font-family">12345678910</dd>
+      <dd>字幅が狭くなっている</dd>
+
+      <dt>font-familyによる文字の横幅の違いを検証（游明朝体）</dt>
+      <dd class="font-ex font-family-yumincho">12345678910</dd>
+      <dd>指定なしと同じように見える。游明朝体には数字のフォントの用意がないのかもしれない。</dd>
+      
+      <dt>font-familyによる文字の横幅の違いを検証（Times New Roman）</dt>
+      <dd class="font-ex font-family-times-new-roman">12345678910</dd>
+      <dd>指定なしと同じように見える。游明朝体には数字のフォントの用意がないのかもしれない。</dd>
+      
+      <dt>font-familyによる文字の横幅の違いを検証（"serif"）</dt>
+      <dd class="font-ex font-family-serif">12345678910</dd>
+      <dd>"serif"はフォントファミリー名ではなく、フォントの種類名なので、""で囲うと認識されない。指定しない場合と同様の結果になる。</dd>
+
+      <dt>font-familyによる文字の横幅の違いを検証（serif）</dt>
+      <dd class="font-ex font-family-x">12345678910</dd>
+      <dd>”serif”ではなく、serifとするときちんと認識された</dd>
+
+    </dl>
+
+  </section>
+  
+  <section id="font-weight" class="contents-wrapper">
+    <h2>font-weight</h2>
+    <dl>
+      <dt>bold</dt>
+      <dd class="font-ex font-totsu fw-bold">石井花壇（２）</dd>
+      <dd>上記は、「bold」の例です。「bold」の指定をしていない（１）の例と差がないように見えます。</dd>
+      
+      <dt>font-weight:800;</dt>
+      <dd class="font-ex font-totsu fw800">石井花壇（３）</dd>
+      <dd>font-weightは数値で指定することもできます。800と指定してみました。変化がありません。「凸版文久見出し明朝」というフォントにはfont-weightの種類がないということでしょうか。</dd>
+      
+      <dt>bold（font-family指定なし）</dt>
+      <dd class="font-ex fw-bold">石井花壇（４）</dd>
+      <dd>上記は、font-weight:bold;としています。見本テキスト（０）とくらべて太くなっていることがわかります。</dd>
+      
+      <dt>800（font-family指定なし）</dt>
+      <dd class="font-ex fw800">石井花壇（５）</dd>
+      <dd>上記は、font-weight:800;としています。（４）とくらべてわずかに太いように見えます。</dd>
+    </dl>
+  </section>
+  
+  <section id="letter-spacing" class="contents-wrapper">
+    <h2>letter-spacing</h2>
+    <ul>
+      <li>デフォルトでは、０になっていることが多い（ブラウザによる）</li>
+      <li>フォントサイズに応じて字間を決められるemの単位を使うと便利</li>
+      <li>1emとすると、1文字の高さ分の時間が空く</li>
+    </ul>
+    <p>letter-spacingはXDのAV項目（カーニング）の値を1,000で割り、計算後の数値に「em」をつければよい。</p>
+    <dl>
+      <dt>letter-spacing:0.18em</dt>
+      <dd class="font-ex ls018">石井花壇（６）</dd>
+      <dd>上記は、letter-spacing:0.18emとしています。</dd>
+      
+      <dt>letter-spacing:0.18em（フォントファミリーも指定）</dt>
+      <dd class="font-ex font-totsu ls018">石井花壇（7）</dd>
+      <dd>上記は、letter-spacing:0.18emとしています。</dd>
+      
+    </dl>
+  </section>
+  
+  <section id="line-height" class="contents-wrapper">
+    <h2>line-height</h2>
+    <ul>
+      <li>line-heightは単位なしの数値での指定が推奨されている。</li>
+      <li>XDで数値の指定がある場合、line-height:(XDの数値)/font-size;とする</li>
+      <li>XD上のline-heightはテキスト１行目の上と最終行の下の余白を含まないのに対して、CSSのline-heightは両者を含んだ数値を示す
+      </li>
+    </ul>
+    <dl>
+
+      <dt>幅160px高さ160pxのdiv内にfont-size16pxの「あ」を敷き詰めると行間はみ出る</dt>
+      <div class="h250px-wrapper">
+        <dd>
+          <div class="font-16px">
+            あああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああい
+          </div>
+        </dd>
+        <dd>「あ」の文字列の10番目だけに「い」を入れている。幅はちょうど良いが、高さは行間分はみ出している。</dd>
+      </div><!-- .h250px-wrapper -->
+      
+      <dt>line-heigth:1;とすると、行ボックスの高さ＝font-sizeとなる。</dt>
+      <div class="h250px-wrapper line-height1">
+        <dd>
+          <div class="font-16px">
+            あああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああい
+          </div>
+        </dd>
+        <dd>
+          font-sizeが16pxの文字列を幅160px高さ160pxに100字敷き詰めるとぴったりおさまる<br>
+          <br>
+        </dd>
+      </div><!-- .line-height1 -->
+      
+      <dt>１行のテキストに対してline-heightを指定</dt>
+      <dd>
+        <a class="line-height30px" href="">aタグで囲った1行のテキスト（line-height:30px;）</a>
+        <dd>aタグの場合、line-heightを指定しても効かない</dd>
+        <dd>
+          <div class="line-height30px">divタグで囲った1行のテキスト（line-height:30px;）</div>
+        </dd>
+        <dd>divタグの場合、line-heightが効いて、行の高さが30pxになっている</dd>
+
+
+      <dt>２行のテキストに対してline-heightを指定</dt>
+      <dd>
+        <a class="line-height30px" href="">aタグで囲った<br>2行のテキスト（line-height:30px;）</a>
+      </dd>
+      <dd>aタグの場合、領域が2つに分かれてしまう</dd>
+      <dd>
+        <div class="line-height30px">divタグで囲った<br>2行のテキスト（line-height:30px;）</div>
+      </dd>
+      <dd>divタグの場合、2行になっても分かれていない</dd>
+    </dl>
+  </section>
+
+  <section id="reference" class="contents-wrapper">
+    <h2>参考URL</h2>
+    <cite>
+      <ul>
+        <li><a href="https://yumanoblog.com/xd-css/">ユウマのブログ　Adobe XDで要素に関する各CSSの値を計算・取得する方法</a></li>
+        <li><a href="https://saruwakakun.com/html-css/reference/letter-spacing">サルワカ　【CSS】letter-spacingで字間を調整する方法まとめ</a></li>
+      </ul>
+      <dl>
+        <dt>
+          
+        </dt>
+        <dd></dd>
+      </dl>
+    </cite>
+  </section>
+  
+</body>
+</html>
