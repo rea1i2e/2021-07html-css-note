@@ -8,19 +8,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>floatプロパティを使って、要素を横並びにする</h1>
-  <div class="float-box-wrapper">
-    <div class="float-box float-box1">box1</div>
-    <div class="float-box float-box2">box2</div>
-    <div class="float-box float-box3">box3</div>
-  </div>
+  <div class="fixed-area">
+    <header>
+      <h1>floatプロパティ</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">HTML・CSS noteに戻る</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div><!-- /.fixed-area -->
   
-  <p>①横並びにしたboxの下に文章を配置しようとしても、listまで横並びになってしまう。</p>
-  <h2  class="float-desc1">clearプロパティでfloatの解除</h2>
-  <p>floatを解除したい要素で、②「clear:left;」とすると、floatが解除される。</p>
+  <section class="contents-wrapper">
+    <h2>floatで要素を横並びに</h2>
+    <div class="float-box-wrapper">
+      <div class="float-box float-box1">box1</div>
+      <div class="float-box float-box2">box2</div>
+      <div class="float-box float-box3">box3</div>
+    </div>
+    <p>①横並びにしたboxの下に文章を配置しようとしても、listまで横並びになってしまう。</p>
+  </section>
+  
+  <section class="contents-wrapper">
+    <h2 class="float-desc1">clearプロパティでfloatの解除</h2>
+    <p>floatを解除したい要素で、②「clear:left;」とすると、floatが解除される。</p>
+  </section>
 
+<section class="contents-wrapper">
   <h2>clearfixでfloatを解除</h2>
-  
   <ul class="float-ul float-ul1 clearfix">
     <li class="float-li float-li1">list1</li>
     <li class="float-li float-li2">list2</li>
@@ -44,7 +59,7 @@
       }
     </pre>
   </div>
-
+</section>
   
 
 </body>

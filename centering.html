@@ -8,16 +8,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>センタリング色々</h1>
-  <h2>text-alingnによるX軸センタリグ</h2>
-  <div class="text-align-wrapper">
-    <p>text-alignによるセンタリングは、h1タグやpタグimgタグなどのインライン要素に指定できて、指定した親要素の中央に配置される</p>
-  </div>
+  <div class="fixed-area">
+    <header>
+      <h1>センタリング色々</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">HTML・CSS noteに戻る</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div><!-- /.fixed-area -->
 
-  <h2>vertical-alingnによるY軸センタリグ</h2>
-  <div class="vertical-align-wrapper">
-    <p>h1タグやpタグimgタグなどのインライン要素を「vertical-align」でセンタリングするには、「display: table-cel;」とする</p>
-  </div>
+  <section class="contents-wrapper">
+    <h2>text-alingnによるX軸センタリグ</h2>
+    <div class="text-align-wrapper">
+      <p>text-alignによるセンタリングは、h1タグやpタグimgタグなどのインライン要素に指定できて、指定した親要素の中央に配置される</p>
+    </div>
+  </section>
+  
+  <section class="contents-wrapper">
+    <h2>vertical-alingnによるY軸センタリグ</h2>
+    <div class="vertical-align-wrapper">
+      <p>h1タグやpタグimgタグなどのインライン要素を「vertical-align」でセンタリングするには、「display: table-cel;」とする</p>
+    </div>
+  </section>
   
   
 </body>

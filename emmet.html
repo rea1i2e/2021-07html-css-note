@@ -8,103 +8,122 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ドットインストールで学んだこと【Emmet編】</h1>
-  <h2>HTMLの記法</h2>
-  <ul>
-    <li>Emmetの公式サイトに<a href="https://docs.emmet.io/cheat-sheet/">チートシート</a>がある</li>
-    <li>要素名を入力するだけで、例えば「li」 →　「&lt;li&gt;&lt;/li&gt;
-」と展開される</li>
-    <li>aタグのように、よく使う属性まで展開される場合もある。「｜」はカーソルを示し、複数ある場合tabで移動できる</li>＜br＞
-    「a」　→　「&lt;a href=&quot;|&quot;&gt;|&lt;/a&gt;」
-      <li>「要素名」＋「.」＋「クラス名」とすると、クラス名をつけた要素が展開される。<br>
-        例えばこんな感じ　「div.container」　→　「&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
-        」<br>
-        IDも同様にできる
-      </li>
-      <li>IDと複数のクラスを同時に指定することも可能<br>
-      例えばこんな感じ　「dev#reset.btn.disabled」　→　「&lt;dev id=&quot;reset&quot; class=&quot;bnt disabled&quot;&gt;&lt;/dev&gt;
-      」</li>
-      <li>その他の属性は、要素[属性名＝"属性値]と入力すると展開してくれる</li>
-      <li>属性値に連番をつけたい場合は、「$」を使う<br>
-      例えばこんな感じ「div.item*$3」　→<br>
-      <pre>
-        &lt;div class=&quot;item1&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;item2&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;item3&quot;&gt;&lt;/div&gt;<br>
-        「$」を増やすと、連番の桁数が増える
-      </li>
-      </pre>
-      <li>「main>section*3+div.btn」のように入力すると、複数階層に複数の要素を展開できる<br>
+  <div class="fixed-area">
+    <header>
+      <h1>Emmetの便利な使い方</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">HTML・CSS noteに戻る</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div><!-- /.fixed-area -->
+  
+  <section class="contents-wrapper">
+    <h2>HTMLの記法</h2>
+    <ul>
+      <li>Emmetの公式サイトに<a href="https://docs.emmet.io/cheat-sheet/">チートシート</a>がある</li>
+      <li>要素名を入力するだけで、例えば「li」 →　「&lt;li&gt;&lt;/li&gt;
+    」と展開される</li>
+      <li>aタグのように、よく使う属性まで展開される場合もある。「｜」はカーソルを示し、複数ある場合tabで移動できる</li>＜br＞
+      「a」　→　「&lt;a href=&quot;|&quot;&gt;|&lt;/a&gt;」
+        <li>「要素名」＋「.」＋「クラス名」とすると、クラス名をつけた要素が展開される。<br>
+          例えばこんな感じ　「div.container」　→　「&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+          」<br>
+          IDも同様にできる
+        </li>
+        <li>IDと複数のクラスを同時に指定することも可能<br>
+        例えばこんな感じ　「dev#reset.btn.disabled」　→　「&lt;dev id=&quot;reset&quot; class=&quot;bnt disabled&quot;&gt;&lt;/dev&gt;
+        」</li>
+        <li>その他の属性は、要素[属性名＝"属性値]と入力すると展開してくれる</li>
+        <li>属性値に連番をつけたい場合は、「$」を使う<br>
+        例えばこんな感じ「div.item*$3」　→<br>
         <pre>
-        &lt;main&gt;
-          &lt;section&gt;&lt;/section&gt;
-          &lt;section&gt;&lt;/section&gt;
-          &lt;section&gt;&lt;/section&gt;
-          &lt;div class=&quot;btn&quot;&gt;&lt;/div&gt;
-        &lt;/main&gt;
-      </pre>
-      <li>
-        「^（キャレット）を使うと、上の階層に戻って展開することができる」<br>
-        例えばこんな感じ　main>section*2^footer　
-        <pre>
-          &lt;main&gt;
-          &lt;section&gt;&lt;/section&gt;
-          &lt;section&gt;&lt;/section&gt;
-        &lt;/main&gt;
-        &lt;footer&gt;&lt;/footer&gt;
+          &lt;div class=&quot;item1&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;item2&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;item3&quot;&gt;&lt;/div&gt;<br>
+          「$」を増やすと、連番の桁数が増える
+        </li>
         </pre>
-      </li>
-      <li>
-        クラス名やID名のみ入力すると、div要素が展開される
-      </li>
-      <li>
-        ulやtable要素の下にクラス名を入力すると、liやtrなどの子要素が暗黙で展開される
-      </li>
-      <li>
-        「lorem」　→　ダミーテキストが展開される<br>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus temporibus voluptates quo officia sequi unde est magnam minus corrupti! Quidem culpa cum modi accusamus eaque maiores quo similique expedita consequuntur.
-      </li>
-      <li>
-        コマンドパレット　→　対象の範囲を選択して、command+shift+p <br>
-        選択範囲をタグで囲う　→　wrapと入力して、wrap with Abbreviationを選択後、タグを入力<br>
-        複数行の選択範囲を行ごとにタグで囲う　→　wrapと入力して、Wrap Individual Lines with Abbreviationを選択<br>
-        ※なぜかこれはうまく動作しなかった
-      </li>
-      <li>imgタグ上で、コマンドパレットを呼び出し、updateと入力してUpdate Image Sizeを選択すると、imgタグに自動でサイズが展開する</li>
-      <li>imgのサイズの属性に320*2などと入力して、コマンドパレットを呼び出し、evaluateと入力すると、計算した値を返してくれる<br>
-      ※コマンドは出てきたけど、選択しても実行されなかった。</li>
-    </ul>
+        <li>「main>section*3+div.btn」のように入力すると、複数階層に複数の要素を展開できる<br>
+          <pre>
+          &lt;main&gt;
+            &lt;section&gt;&lt;/section&gt;
+            &lt;section&gt;&lt;/section&gt;
+            &lt;section&gt;&lt;/section&gt;
+            &lt;div class=&quot;btn&quot;&gt;&lt;/div&gt;
+          &lt;/main&gt;
+        </pre>
+        <li>
+          「^（キャレット）を使うと、上の階層に戻って展開することができる」<br>
+          例えばこんな感じ　main>section*2^footer
+          <pre>
+            &lt;main&gt;
+            &lt;section&gt;&lt;/section&gt;
+            &lt;section&gt;&lt;/section&gt;
+          &lt;/main&gt;
+          &lt;footer&gt;&lt;/footer&gt;
+          </pre>
+        </li>
+        <li>
+          クラス名やID名のみ入力すると、div要素が展開される
+        </li>
+        <li>
+          ulやtable要素の下にクラス名を入力すると、liやtrなどの子要素が暗黙で展開される
+        </li>
+        <li>
+          「lorem」　→　ダミーテキストが展開される<br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus temporibus voluptates quo officia sequi unde est magnam minus corrupti! Quidem culpa cum modi accusamus eaque maiores quo similique expedita consequuntur.
+        </li>
+        <li>
+          コマンドパレット　→　対象の範囲を選択して、command+shift+p <br>
+          選択範囲をタグで囲う　→　wrapと入力して、wrap with Abbreviationを選択後、タグを入力<br>
+          複数行の選択範囲を行ごとにタグで囲う　→　wrapと入力して、Wrap Individual Lines with Abbreviationを選択<br>
+          ※なぜかこれはうまく動作しなかった
+        </li>
+        <li>imgタグ上で、コマンドパレットを呼び出し、updateと入力してUpdate Image Sizeを選択すると、imgタグに自動でサイズが展開する</li>
+        <li>imgのサイズの属性に320*2などと入力して、コマンドパレットを呼び出し、evaluateと入力すると、計算した値を返してくれる<br>
+        ※コマンドは出てきたけど、選択しても実行されなかった。</li>
+      </ul>
+  </section>
 
     <!-- <img src="img/logo.png" alt="" width="200*2" height="100"> -->
 
-    <h2>CSSの記法</h2>
-    <p>
-      CSSではプロパティに対してEmmetの記法が変える
-    </p>
-    <ul>
-      <li>
-        「m」　→　「margin: ;」
-      </li>
-      <li>
-        「m10」　→　「margin: 10px;」
-      </li>
-      <li>
-        「m10p」　→　「margin: 10%;」
-      </li>
-      <li>
-        「m10r」　→　「margin: 10rem;」
-      </li>
-      <li>
-        「m0-auto」　→　「margin: 0 auto;」
-      </li>
-      <li>
-        「mb10」　→　「margin-bottom: 10px;」
-      </li>
-    </ul>
-    <p>Emmetはカスタマイズできる</p>
+    <section class="contents-wrapper">
+      <h2>CSSの記法</h2>
+      <p>
+        CSSではプロパティに対してEmmetの記法が変える
+      </p>
+      <ul>
+        <li>
+          「m」　→　「margin: ;」
+        </li>
+        <li>
+          「m10」　→　「margin: 10px;」
+        </li>
+        <li>
+          「m10p」　→　「margin: 10%;」
+        </li>
+        <li>
+          「m10r」　→　「margin: 10rem;」
+        </li>
+        <li>
+          「m0-auto」　→　「margin: 0 auto;」
+        </li>
+        <li>
+          「mb10」　→　「margin-bottom: 10px;」
+        </li>
+      </ul>
+      <p>Emmetはカスタマイズできる</p>
+    </section>
 
-  
-  <cite>出典　<a href="https://dotinstall.com/lessons/basic_emmet_v3">ドットインストールEmmet入門入門</a></cite>
-  
+    <section id="reference" class="contents-wrapper">
+      <h2>参考URL</h2>
+      <cite>
+        <ul>
+          <li><<a href="https://dotinstall.com/lessons/basic_emmet_v3">ドットインストールEmmet入門入門</a></li>
+        </ul>
+      </cite>
+    </section>  
 </body>
 </html>

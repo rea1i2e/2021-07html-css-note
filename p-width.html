@@ -8,33 +8,45 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>pタグに関する疑問</h1>
+  <div class="fixed-area">
+    <header>
+      <h1>pタグに関する疑問</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">HTML・CSS noteに戻る</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div><!-- /.fixed-area -->
+  
   <p>
     width1000pxのdiv内に、width500pxのdivとwidthを指定しないwidthを横並びにする。<br>
     その場合、width500pxに指定したはずのdivのwidthは500pxよりも小さくなる
   </p>
 
-  <h2>pタグの親要素にwidthを指定しない場合</h2>
-  <div class="w1000px-wrapper">
-    <div class="w500px-wrapper">divタグ幅500px</div>
-    <div class="yellow-wrapper">
-      <p>width:500px</p>
-      <p>
-        あああああああああああああああああああああああああああああああああああああああああああああああああああ
-      </p>
+  <section class="contents-wrapper">
+    <h2>pタグの親要素にwidthを指定しない場合</h2>
+    <div class="w1000px-wrapper">
+      <div class="w500px-wrapper">divタグ幅500px</div>
+      <div class="yellow-wrapper">
+        <p>width:500px</p>
+        <p>
+          あああああああああああああああああああああああああああああああああああああああああああああああああああ
+        </p>
+      </div>
     </div>
-  </div>
- 
-  <h2>pタグの親要素に500pxのwidthを指定した場合</h2>
-  <div class="w1000px-wrapper">
-    <div class="w500px-wrapper">divタグ幅500px</div>
-    <div class="w500px-wrapper yellow-wrapper">
-      <p>width:500px</p>
-      <p>
-        あああああああああああああああああああああああああああああああああああああああああああああああああああ
-      </p>
+  </section>
+  <section class="contents-wrapper">
+    <h2>pタグの親要素に500pxのwidthを指定した場合</h2>
+    <div class="w1000px-wrapper">
+      <div class="w500px-wrapper">divタグ幅500px</div>
+      <div class="w500px-wrapper yellow-wrapper">
+        <p>width:500px</p>
+        <p>
+          あああああああああああああああああああああああああああああああああああああああああああああああああああ
+        </p>
+      </div>
     </div>
-  </div>
-  
+  </section>
 </body>
 </html>

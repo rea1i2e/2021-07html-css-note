@@ -1,6 +1,9 @@
-/* ***************************************************
-font.html
-*************************************************** */
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+/* headerを含む画面上部の領域を固定 */
 .fixed-area {
   box-sizing: border-box;
   position: fixed;
@@ -10,7 +13,7 @@ font.html
   background: #fff;
   width: 100%;
   padding: 0 4%;
-}
+}  
 
 header {
   /* background: pink; */
@@ -18,7 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width:100%;
-}
+}  
 
 nav {
   width:60%;
@@ -35,6 +38,24 @@ nav ul {
 nav li {
   padding-left: 8px;
 }
+
+
+.contents-wrapper {
+  /* background: lime; */
+
+  /* 上部に余白を作り、固定されたヘッダーに隠れないようにする */
+  padding: 100px 4% 0;
+}
+
+.btn {
+  background: green;
+  padding: 10px;
+  line-height: 30px;
+}
+
+/* ***************************************************
+font.html
+*************************************************** */
 
 /* 文字列の例にデフォルトのフォントサイズを指定 */
 .font-ex {
@@ -121,11 +142,6 @@ nav li {
 margin-padding.html
 *************************************************** */
 
-.contents-wrapper {
-  /* margin-top: 400px; */
-  padding: 0 4%;
-}
-
 /* サンプルに背景色を */
 .ex {
   background: #ccc;
@@ -151,8 +167,9 @@ css-selector.html
   color: blue;
 }
 
-
-/* ブロークングリッドテスト */
+/* **************************************************
+broken-grid.html
+************************************************** */
 .broken-grid {
   background: #ccc;
   width: 1000px;
@@ -305,10 +322,13 @@ table td {
   padding: 4px;
 }
 
-.writing-mode {
+/* *************************************************
+vertical-writing-mode.html
+************************************************* */
+/* .writing-mode {
   background: #ccc;
   width: 1000px;
-}
+} */
 
 .writing-mode-test {
   background: #aaa;
@@ -316,15 +336,11 @@ table td {
   writing-mode: vertical-rl;
 } 
 
-.btn {
-  background: green;
-  padding: 10px;
-  line-height: 30px;
-}
-
 .btnvertical {
   writing-mode: vertical-rl;
 }
+
+/* vertical-writing-mode.html 終わり **************************** */
 
 /* *************************************************
 centering.html
@@ -334,7 +350,6 @@ centering.html
   width: 500px;
   height: 200px;
   padding: 24px;
-  margin: 12px;
   text-align: center;
 }
 .vertical-align-wrapper {
@@ -343,7 +358,6 @@ centering.html
   width: 500px;
   height: 200px;
   padding: 24px;
-  margin: 12px;
   vertical-align: middle;
 }
 
@@ -365,6 +379,95 @@ p-width.html
   background: yellow;
 }
 
+/* ***************************************************
+slide.html
+*************************************************** */
+.main_imgBox {
+  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+  overflow: hidden;/* imgがズームした時にはみ出た部分を隠す。 */
+  position: relative;
+}
+
+.main_img {
+  z-index:10;
+  opacity: 0;
+  width: 100%;
+  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* -webkit-animation: anime 36s 0s infinite;
+  animation: anime 36s 0s infinite; */
+  /* 上記コメントアウトした２行の秒数を半分に（36s→18s） */
+  -webkit-animation: anime 18s 0s infinite;
+  animation: anime 18s 0s infinite;
+}
+
+  .main_img:nth-of-type(2) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s; }
+
+  .main_img:nth-of-type(3) {
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s; }
+
+  /* .main_img:nth-of-type(4) {
+    -webkit-animation-delay: 18s;
+    animation-delay: 18s; }
+
+  .main_img:nth-of-type(5) {
+    -webkit-animation-delay: 24s;
+    animation-delay: 24s; }
+
+  .main_img:nth-of-type(6) {
+    -webkit-animation-delay: 30s;
+    animation-delay: 30s; } */
+
+/* 画像の枚数を6→3枚に減らしたので、アニメーションの進行もゆっくりに変更 */
+@keyframes anime {
+  0% {
+      opacity: 0;
+  }
+  /* 8% { */
+  16% {
+      opacity: 1;
+  }
+  /* 17% { */
+  34% {
+      opacity: 1;
+  }
+  /* 25% { */
+50% {
+      opacity: 0;
+      transform: scale(1.2);
+      z-index:9;
+  }
+  100% { opacity: 0 }
+}
+
+@-webkit-keyframes anime {
+  0% {
+      opacity: 0;
+  }
+  16% {
+      opacity: 1;
+  }
+  34% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+      z-index:9;
+  }
+  100% { opacity: 0 }
+}
+
+
+/* slide.html終わり ******************************** */
 
 /* #reference ************************************* */
 #reference {
