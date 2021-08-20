@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>slide show sample</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide show sample</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="fixed-area-with-slide">
+      <header class="">
+        <h1><a href="#">スライドのサンプル</a></h1>
+        <nav>
+          <ul>
+            <li><a href="#reference">reference</a></li>
+            <li><a href="index.html">HTML・CSS noteに戻る</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div><!-- /.fixed-area -->
+    <section id="slide" class="contents-wrapper">
+      <h2>3枚の画像を拡大しながらスライド表示</h2>
+    </section>
+  <div class="main_imgBox">
+    
+    <div class="main_img" style="background-image: url(img/mainbg01.jpg)"></div>
+    <div class="main_img" style="background-image: url(img/mainbg02.jpg)"></div>
+    <div class="main_img" style="background-image: url(img/mainbg03.jpg)"></div>
+  </div>
+  
 
-
-
-<div class="main_imgBox">
-  <div class="main_img" style="background-image: url(img/mainbg01.jpg)"></div>
-  <div class="main_img" style="background-image: url(img/mainbg02.jpg)"></div>
-  <div class="main_img" style="background-image: url(img/mainbg03.jpg)"></div>
-  <!-- <div class="main_img" style="background-image: url(img/mainbg01.jpg)"></div> 
-  <div class="main_img" style="background-image: url(img/mainbg02.jpg)"></div>
-  <div class="main_img" style="background-image: url(img/mainbg03.jpg)"></div> -->
-</div>
+  <section id="reference" class="contents-wrapper">
+    <h2>参考URL</h2>
+    <cite>
+      <ul>
+        <li><a href=""></a></li>
+      </ul>
+    </cite>
+  </section>
 
 
 </body>

@@ -10,17 +10,22 @@
 <body>
   <div class="fixed-area">
     <header>
-      <h1>floatプロパティ</h1>
+      <h1><a href="#">floatプロパティ</a></h1>
+
       <nav>
         <ul>
+          <li><a href="#float-left">float:left</a></li>
+          <li><a href="#float-clear">clearプロパティ</a></li>
+          <li><a href="#reference">reference</a></li>
           <li><a href="index.html">HTML・CSS noteに戻る</a></li>
         </ul>
       </nav>
     </header>
   </div><!-- /.fixed-area -->
   
-  <section class="contents-wrapper">
-    <h2>floatで要素を横並びに</h2>
+  <section id="float-left" class="contents-wrapper">
+    <h2>float:left;で要素を横並びに</h2>
+    <h3>floatプロパティで、ブロック要素を横並びにすることができる</h3>
     <div class="float-box-wrapper">
       <div class="float-box float-box1">box1</div>
       <div class="float-box float-box2">box2</div>
@@ -29,37 +34,71 @@
     <p>①横並びにしたboxの下に文章を配置しようとしても、listまで横並びになってしまう。</p>
   </section>
   
-  <section class="contents-wrapper">
-    <h2 class="float-desc1">clearプロパティでfloatの解除</h2>
+  <section id="float-clear" class="contents-wrapper">
+    <h3 class="float-desc1">clearプロパティでfloatの解除</h3>
+    <!-- .float-desc1でfloatを解除している -->
     <p>floatを解除したい要素で、②「clear:left;」とすると、floatが解除される。</p>
   </section>
 
-<section class="contents-wrapper">
-  <h2>clearfixでfloatを解除</h2>
-  <ul class="float-ul float-ul1 clearfix">
-    <li class="float-li float-li1">list1</li>
-    <li class="float-li float-li2">list2</li>
-    <li class="float-li float-li3">list3</li>
-  </ul>
+  <section class="contents-wrapper">
+    <h3>clearfixでfloatを解除</h3>
+    <!-- liの親要素に.clear-fixを指定して、floatを解除 -->
+    <ul class="float-ul float-ul1 clearfix">
+      <li class="float-li float-li1">list1</li>
+      <li class="float-li float-li2">list2</li>
+      <li class="float-li float-li3">list3</li>
+    </ul>
+    
+    <ul class="float-ul float-ul2 clearfix">
+      <li class="float-li float-li1">list1</li>
+      <li class="float-li float-li2">list2</li>
+      <li class="float-li float-li3">list3</li>
+    </ul>
+
+    <p>floatを含む親要素に下記のようなclearfixクラスを指定することでfloatを解除できる。</p>
+
+    <div class="code-ex">
+<pre>.clearfix:after {
+  content: &quot;&quot;;
+  display: block;
+  clear: both;
+}</pre>
+    </div>
+  </section>
+
+  <section class="contents-wrapper">
+    <h2>floatを指定したオブジェクトの親要素の高さ</h2>
+    <h3>floatを指定したオブジェクト(.box1と.box2)の親要素(.box-wrapper)は、高さを指定しない限り高さがゼロになる</h3>
+    <div class="box-wrapper">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+    </div><div class="clear"></div>
+
+    <h3>親要素(.box-wrapper)に空要素を入れて、"clear:left;"とすると、親要素の高さは子要素（.box1と.box2の高い方）に合わせられる</h3>
+    <div class="box-wrapper">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="clear"></div>
+    </div>
+    <h3>
+      先述のように、.box-wrapper自体に.clear-fixを指定することでも、同様のことができる
+    </h3>
+    <div class="box-wrapper clearfix">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+    </div>
   
-  <ul class="float-ul float-ul2 clearfix">
-    <li class="float-li float-li1">list1</li>
-    <li class="float-li float-li2">list2</li>
-    <li class="float-li float-li3">list3</li>
-  </ul>
+  </section>
 
-  <p>floatを含む親要素に下記のようなclearfixクラスを指定することでfloatを解除できる。</p>
 
-  <div class="code-ex">
-    <pre>
-      .clearfix:after {
-        content: &quot;&quot;;
-        display: block;
-        clear: both;
-      }
-    </pre>
-  </div>
-</section>
+  <section id="reference" class="contents-wrapper">
+    <h2>参考URL</h2>
+    <cite>
+      <ul>
+        <li><a href=""></a></li>
+      </ul>
+    </cite>
+  </section>
   
 
 </body>

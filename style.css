@@ -13,6 +13,7 @@ body {
   background: #fff;
   width: 100%;
   padding: 0 4%;
+  z-index: 11;
 }  
 
 header {
@@ -39,7 +40,6 @@ nav li {
   padding-left: 8px;
 }
 
-
 .contents-wrapper {
   /* background: lime; */
 
@@ -51,6 +51,11 @@ nav li {
   background: green;
   padding: 10px;
   line-height: 30px;
+}
+
+/* #reference ************************************* */
+#reference {
+  min-height: calc( 100vh - 100px );
 }
 
 /* ***************************************************
@@ -304,8 +309,46 @@ float.html
 
 .code-ex {
   background: #ddd;
-  width: 200px;
-  padding: 12px;
+  width: fit-content;
+  padding: 4px 16px;
+}
+
+
+.box-wrapper {
+  background:lime;
+  margin-bottom: 16px;
+  border: 2px solid green;
+}
+
+.code-wrapper {
+  background: #ccc;
+  width: fit-content;
+  padding: 4px 16px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.box1 {
+  background-color: yellow;
+}
+
+.box2 {
+  background-color: blue;
+  height: 50px;
+}
+
+.clear {
+  clear: left;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /* float.html 終わり **************************** */
@@ -382,6 +425,24 @@ p-width.html
 /* ***************************************************
 slide.html
 *************************************************** */
+
+.fixed-area-with-slide {
+  box-sizing: border-box;
+  position: fixed;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 100%;
+  padding: 0 4%;
+  z-index: 11;
+  /* slideでz-index: 10;が使われているため、それより上のレイヤーにする必要がある */
+  opacity: .7;
+}  
+
+#slide h2 {
+  text-align: center;
+}
 .main_imgBox {
   height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
   overflow: hidden;/* imgがズームした時にはみ出た部分を隠す。 */
@@ -469,10 +530,6 @@ slide.html
 
 /* slide.html終わり ******************************** */
 
-/* #reference ************************************* */
-#reference {
-  min-height: 400px;
-}
 
 
 
