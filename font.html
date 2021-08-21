@@ -31,26 +31,52 @@
     <h2>font-size</h2>
     <dl>
       <dt>512pxの"+"を比較</dt>
-      <dd>ここにサンプル</dd>
-      <dd>ここに箇条書きで、各デバイスでの物理的サイズを記入</dd>
-      
+        <div class="font512px-wrapper">
+          <dd class="font512px">+</dd>
+          <dd>
+            <h3>デバイスにより異なる"+"の"-"部分の物理的サイズの違い</h3>
+            <table>
+              <tr>
+              <th>iPhone11 (1,792px 326ppi )1680px</th>
+              <td>48mm</td>
+            </tr>
+            <tr>
+              <th>擬似解像度幅1680px</th>
+              <td>48mm</td>
+            </tr>
+            <tr>
+              <th>擬似解像度幅1440px</th>
+              <td>56mm</td>
+            </tr>
+            <tr>
+              <th>擬似解像度幅1280px</th>
+              <td>64mm</td>
+            </tr>
+            <tr>
+              <th>擬似解像度幅1024px</th>
+              <td>79mm</td>
+            </tr>
+            </table>
+          </dd>
+        </div>
+  
       <dt>remで指定</dt>
-      <dd class="font-ex">石井花壇（０）</dd>
-      <dd>上記のfont-sizeは、htmlのfont-sizeを100%とした上で3remと指定しています。</dd>
+        <dd class="font-ex">石井花壇（０）</dd>
+        <dd>上記のfont-sizeは、htmlのfont-sizeを100%とした上で3remと指定しています。</dd>
 
       <dt>pxで指定</dt>
-      <dd class="font-px">石井花壇（８）</dd>
-      <dd>上記のfont-sizeは、48pxで指定。ブラウザの設定によらず、サイズが固定される。</dd>
+        <dd class="font-px">石井花壇（８）</dd>
+        <dd>上記のfont-sizeは、48pxで指定。ブラウザの設定によらず、サイズが固定される。</dd>
 
       <dt>幅160px高さ160pxのdiv内にfont-size16pxの「あ」を敷き詰めるとどうなるか実験</dt>
-      <div class="h250px-wrapper">
-        <dd>
-          <div class="font-16px">
-            あああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああい
-          </div>
-        </dd>
-        <dd>「あ」の文字列の10番目だけに「い」を入れている。幅はちょうど良いが、高さは行間分はみ出している。</dd>
-      </div><!-- .font-16px -->
+        <div class="h250px-wrapper">
+          <dd>
+            <div class="font-16px">
+              あああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああいあああああああああい
+            </div>
+          </dd>
+          <dd>「あ」の文字列の10番目だけに「い」を入れている。幅はちょうど良いが、高さは行間分はみ出している。</dd>
+        </div><!-- .font-16px -->
     </dl>
   </section>
 

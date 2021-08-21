@@ -61,6 +61,39 @@ nav li {
 /* ***************************************************
 font.html
 *************************************************** */
+.font512px-wrapper {
+  display: flex;
+}
+
+.font512px {
+  /* margin: 0px; */
+  /* padding: 0px; */
+  font-size: 512px;
+  line-height: 1;
+  background: #ccc;
+  width: fit-content;
+}
+
+.font512px-wrapper h3 {
+  font-weight: normal;
+}
+
+#font-size tr:nth-child(odd) {
+  background: #ccc;
+}
+
+#font-size tr:nth-child(even) {
+  background: #eee;
+}
+
+#font-size th, #font-size td {
+  padding: 4px 16px;
+}
+
+#font-size th {
+  text-align: right;
+}
+
 
 /* 文字列の例にデフォルトのフォントサイズを指定 */
 .font-ex {
@@ -374,13 +407,16 @@ float.html
 /* *************************************************
 vscode.html
 ************************************************* */
-table tr:ntd-child(odd) td {
-  background: #cccccc;
+#vscode-shortcut tr:nth-child(odd) {
+  background: #ccc;
 }
 
-table td {
-  background: #eeeeee;
-  padding: 4px;
+#vscode-shortcut tr:nth-child(even) {
+  background: #eee;
+}
+
+#vscode-shortcut td {
+  padding: 4px 8px;
 }
 
 /* *************************************************
