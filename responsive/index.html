@@ -10,30 +10,38 @@
 </head>
 
 <body>
-  <header class="responsive-header">
-    <h1>レスポンシブ</h1>
-    <nav>
-      <ul>
-        <li><a href="#responsive-sample01">sample01</a></li>
-        <li><a href="#responsive-sample02">sample02</a></li>
-        <li><a href="#responsive-sample03">sample03</a></li>
-        <li><a href="../index.html">html-css-noteに戻る</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="first-view">
 
-  <section id="site-desc" class="contents-wrapper">
-    <h2>レスポンシブコーディングの方針</h2>
-    <ul>
-      <li>メディアクエリ以外での対応
+    <header class="responsive-header">
+      <h1>レスポンシブ</h1>
+      <nav>
         <ul>
-          <li>コンテンツ幅はmax-widthを指定した上で、画面幅に対する割合(vw)で指定</li>
-          <li>画像はコンテンツ幅に対する割合(%)で指定する。または親要素にコンテンツ幅に対する割合を指定し、画像には100%で指定する</li>
+          <li><a href="#responsive-sample01">sample01</a></li>
+          <li><a href="#responsive-sample02">sample02</a></li>
+          <li><a href="#responsive-sample03">sample03</a></li>
+          <li><a href="../index.html">html-css-noteに戻る</a></li>
         </ul>
-      </li>
-      <li>メディアクエリでの対応</li>
-    </ul>
-  </section>
+      </nav>
+    </header>
+    
+    <section id="site-desc" class="contents-wrapper">
+      <h2>レスポンシブコーディングの方針</h2>
+      <ul>
+        <li>メディアクエリ以外での対応
+          <ul>
+            <li>画像（歪み防止）
+              <ul>
+                <li>コンテンツ幅はmax-widthを指定した上で、画面幅に対する割合(vw)で指定</li>
+                <li>画像はコンテンツ幅に対する割合(%)で指定。または親要素にコンテンツ幅に対する割合を指定し、画像には100%で指定する</li>
+                <li>高さはheigth:fit-contentとする</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>メディアクエリでの対応</li>
+      </ul>
+    </section>
+  </div>
 
   <section id="responsive-sample01" class="contents-wrapper">
     <h2>画像と「見出し＋テキスト」が横並びのコンテンツ</h2>
@@ -91,6 +99,8 @@
   </section>
 
   <section id="responsive-sample03" class="contents-wrapper">
+    <h2>『画像の横に「見出し＋テキスト」』のセットが3行2列並ぶコンテンツ</h2>
+
     <div class="s03item-wrapper">
       <div class="s03item">
         <img src="img/river03.jpg" alt="">
