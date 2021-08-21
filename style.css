@@ -259,6 +259,24 @@ img.html
   object-fit: cover;
 }
 
+.img-height-sample-wrapper {
+  display: flex;
+  border: 1px dashed #333;
+  margin-bottom: 16px;
+}
+
+#img-height img {
+  width: 100px;
+}
+
+#img-height .fit-content {
+  height: fit-content;
+}
+
+#img-height .desc-wrapper {
+  padding-left: 16px;
+}
+
 /* img.html 終わり ******************************* */
 
 /* *************************************************
