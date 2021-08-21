@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>テスト</title>
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <header class="responsive-header">
+    <h1>レスポンシブ</h1>
+    <nav>
+      <ul>
+        <li><a href="#responsive-sample01">sample01</a></li>
+        <li><a href="#responsive-sample02">sample02</a></li>
+        <li><a href="#responsive-sample03">sample03</a></li>
+        <li><a href="index.html">html-css-noteに戻る</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="site-desc" class="contents-wrapper">
+    <h2>レスポンシブコーディングの方針</h2>
+    <ul>
+      <li>メディアクエリ以外での対応
+        <ul>
+          <li>コンテンツ幅はmax-widthを指定した上で、画面幅に対する割合(vw)で指定</li>
+          <li>画像はコンテンツ幅に対する割合(%)で指定する。または親要素にコンテンツ幅に対する割合を指定し、画像には100%で指定する</li>
+        </ul>
+      </li>
+      <li>メディアクエリでの対応</li>
+    </ul>
+  </section>
+
+  <section id="responsive-sample01" class="contents-wrapper">
+    <h2>画像と「見出し＋テキスト」が横並びのコンテンツ</h2>
+    
+    <div class="s01item-wrapper">
+      <div class="s01item">
+        <img src="img/river01.jpg" alt="">
+        <div class="s01item-desc">
+          <h3>river</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga temporibus quisquam dicta nemo iusto odit a excepturi saepe quos officiis provident, veniam dignissimos unde soluta esse eveniet impedit cum.</p>
+        </div>
+      </div>
+      
+      <div class="s01item">
+        <img src="img/river01.jpg" alt="">
+        <div class="s01item-desc">
+          <h3>river</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga temporibus quisquam dicta nemo iusto odit a excepturi saepe quos officiis provident, veniam dignissimos unde soluta esse eveniet impedit cum.</p>
+        </div>
+      </div>
+      
+      <div class="s01item">
+        <img src="img/river01.jpg" alt="">
+        <div class="s01item-desc">
+          <h3>river</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga temporibus quisquam dicta nemo iusto odit a excepturi saepe quos officiis provident, veniam dignissimos unde soluta esse eveniet impedit cum.</p>
+        </div>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <section id="responsive-sample02" class="contents-wrapper">
+    <h2>「画像＋見出し＋テキスト」のセットが横並びのレイアウト</h2>
+    <div class="s02item-wrapper">
+      <div class="s02item">
+        <img src="img/river02.jpg" alt="">
+        <h3>river02</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, optio sunt, nisi reiciendis iste itaque alias saepe quis ducimus similique maxime non cum inventore incidunt quam quia iusto sit numquam!</p>
+      </div>
+
+      <div class="s02item">
+        <img src="img/river02.jpg" alt="">
+        <h3>river02</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, optio sunt, nisi reiciendis iste itaque alias saepe quis ducimus similique maxime non cum inventore incidunt quam quia iusto sit numquam!</p>
+      </div>
+
+      <div class="s02item">
+        <img src="img/river02.jpg" alt="">
+        <h3>river02</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, optio sunt, nisi reiciendis iste itaque alias saepe quis ducimus similique maxime non cum inventore incidunt quam quia iusto sit numquam!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="responsive-sample03" class="contents-wrapper">
+    <div class="s03item-wrapper">
+      <div class="s03item">
+        <img src="img/river03.jpg" alt="">
+        <div class="s03item-desc">
+          <h3>river03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio, accusamus, animi mollitia voluptatibus obcaecati alias cupiditate quasi hic non qui iure possimus esse, dolorem maxime eveniet architecto officia. Ea!</p>
+        </div>
+      </div>
+      <div class="s03item">
+        <img src="img/river03.jpg" alt="">
+        <div class="s03item-desc">
+          <h3>river03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio, accusamus, animi mollitia voluptatibus obcaecati alias cupiditate quasi hic non qui iure possimus esse, dolorem maxime eveniet architecto officia. Ea!</p>
+        </div>
+      </div>
+      <div class="s03item">
+        <img src="img/river03.jpg" alt="">
+        <div class="s03item-desc">
+          <h3>river03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio, accusamus, animi mollitia voluptatibus obcaecati alias cupiditate quasi hic non qui iure possimus esse, dolorem maxime eveniet architecto officia. Ea!</p>
+        </div>
+      </div>
+      <div class="s03item">
+        <img src="img/river03.jpg" alt="">
+        <div class="s03item-desc">
+          <h3>river03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio, accusamus, animi mollitia voluptatibus obcaecati alias cupiditate quasi hic non qui iure possimus esse, dolorem maxime eveniet architecto officia. Ea!</p>
+        </div>
+      </div>
+      <div class="s03item">
+        <img src="img/river03.jpg" alt="">
+        <div class="s03item-desc">
+          <h3>river03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio, accusamus, animi mollitia voluptatibus obcaecati alias cupiditate quasi hic non qui iure possimus esse, dolorem maxime eveniet architecto officia. Ea!</p>
+        </div>
+      </div>
+      <div class="s03item">
+        <img src="img/river03.jpg" alt="">
+        <div class="s03item-desc">
+          <h3>river03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio, accusamus, animi mollitia voluptatibus obcaecati alias cupiditate quasi hic non qui iure possimus esse, dolorem maxime eveniet architecto officia. Ea!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
