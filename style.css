@@ -47,12 +47,6 @@ nav li {
   padding: 100px 4% 0;
 }
 
-.btn {
-  background: green;
-  padding: 10px;
-  line-height: 30px;
-}
-
 /* #reference ************************************* */
 #reference {
   min-height: calc( 100vh - 100px );
@@ -426,6 +420,13 @@ vertical-writing-mode.html
   background: #ccc;
   width: 1000px;
 } */
+
+
+.btn {
+  background: green;
+  padding: 10px;
+  line-height: 30px;
+}
 
 .writing-mode-test {
   background: #aaa;

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="fixed-area">
+    <header>
+      <h1>displayプロパティ</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">HTML・CSS noteに戻る</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div><!-- /.fixed-area -->
+  
+  <section class="contents-wrapper">
+    <h2>垂直方向の中央ぞろえをする際、vertical-align:middleとする方法がある。その際、display:table-cell;とする必要がある。この場合、marginが効かない。</h2>
+    <div class="table-cell box box1">box1</div>
+    <div class="table-cell box box2">box2</div>
+    <h2>しかし、親要素にdisplay:flex;とした場合、子要素のdisplay:table-cell;が効かない</h2>
+    <div class="flex">
+      <div class="table-cell box box1">box1</div>
+      <div class="table-cell box box2">box2</div>
+    </div>
+  </section>
+</body>
+</html>

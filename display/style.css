@@ -1,0 +1,80 @@
+@charset "utf-8";
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+/* headerを含む画面上部の領域を固定 */
+.fixed-area {
+  box-sizing: border-box;
+  position: fixed;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 100%;
+  padding: 0 4%;
+  z-index: 11;
+}  
+
+header {
+  /* background: pink; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+}  
+
+nav {
+  width:60%;
+}
+
+nav ul {
+  /* background:olive; */
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav li {
+  padding-left: 8px;
+}
+
+.contents-wrapper {
+  /* background: lime; */
+
+  /* 上部に余白を作り、固定されたヘッダーに隠れないようにする */
+  padding: 100px 4% 0;
+}
+
+/* #reference ************************************* */
+#reference {
+  min-height: calc( 100vh - 100px );
+}
+
+
+.flex {
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 16px;
+}
+
+.box1 {
+  background: hsl(30, 60%, 60%);
+}
+
+.box2 {
+  background: hsl(60, 60%, 60%);
+}
+
+.table-cell {
+  display: table-cell;
+}
+
