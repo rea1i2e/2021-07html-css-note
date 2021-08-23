@@ -164,6 +164,7 @@ body {
 
   .s02item-wrapper {
     display: block;
+    width: 100%;
   }
   
   .s02item {
