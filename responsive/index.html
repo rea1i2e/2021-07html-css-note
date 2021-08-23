@@ -27,13 +27,17 @@
     <section id="site-desc" class="contents-wrapper">
       <h2>レスポンシブコーディングの方針</h2>
       <ul>
-        <li>メディアクエリ以外での対応（幅1920〜1180px）
+        <li>メディアクエリ以外での対応（幅1920〜1280px）
           <ul>
             <li>画像（歪み防止）
               <ul>
+                <li>*にbox-sizing: border-box;</li>
+                <li>bodyにwidth: 100%;とmax-width: 1920px;</li>
+                <li>コンテンツ幅に、width: calc( 100vw - 100px );とmax-width: 1180px;</li>
                 <li>コンテンツ幅はmax-widthを指定した上で、画面幅に対する割合(vw)で指定</li>
-                <li>画像はコンテンツ幅に対する割合(%)で指定。または親要素にコンテンツ幅に対する割合を指定し、画像には100%で指定する</li>
+                <li>画像サイズはvw指定＋最大値をpx指定</li>
                 <li>高さはheigth:fit-contentとする</li>
+                <li>レイアウトを区切る親要素がある場合には、上記の幅を親要素に指定し、画像は100%指定をする</li>
               </ul>
             </li>
           </ul>
@@ -44,7 +48,7 @@
   </div>
 
   <section id="responsive-sample01" class="contents-wrapper">
-    <h2>画像と「見出し＋テキスト」が横並びのコンテンツ</h2>
+    <h2>1.画像と「見出し＋テキスト」が横並びのコンテンツ</h2>
     
     <div class="s01item-wrapper">
       <div class="s01item">
@@ -76,7 +80,7 @@
   </section>
 
   <section id="responsive-sample02" class="contents-wrapper">
-    <h2>「画像＋見出し＋テキスト」のセットが横並びのレイアウト</h2>
+    <h2>2.「画像＋見出し＋テキスト」のセットが横並びのレイアウト</h2>
     <div class="s02item-wrapper">
       <div class="s02item">
         <img src="img/river02.jpg" alt="">
@@ -99,7 +103,7 @@
   </section>
 
   <section id="responsive-sample03" class="contents-wrapper">
-    <h2>『画像の横に「見出し＋テキスト」』のセットが3行2列並ぶコンテンツ</h2>
+    <h2>3.『画像の横に「見出し＋テキスト」』のセットが3行2列並ぶコンテンツ</h2>
 
     <div class="s03item-wrapper">
       <div class="s03item">
