@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="wrapper">
+    <h1>レスポンシブを考慮したサイズ指定</h1>
+  </header>
+  <section id="css-variable01" class="wrapper">
+    <ul>
+      
+      <li>
+        <h2>px指定</h2>
+        <div class="desc-wrapper">
+          <div class="square01 px-square">295px</div>
+          <div class="desc">
+            <!-- <p>指定は簡単だが、サイズは固定</p> -->
+          </div>
+        </div>
+      </li>
+      
+      <li>
+        <h2>%指定</h2>
+        <div class="desc-wrapper">
+          <div class="square01 percent-square">25%</div>
+          <div class="desc">
+            <!-- <p>幅は親要素の幅の25%を指定</p>
+            <p>高さは%指定できず、固定</p> -->
+        </div>
+        </div>
+      </li>
+      <li>
+        <h2>vw指定</h2>
+        <div class="desc-wrapper">
+          <div class="square01 vw-square">90vw x 割合</div>
+          <div class="desc">
+            <!-- <p>画面幅が1280pxのとき、画面幅に応じて、サイズが大きくなってしまう</p>
+            <p>画面幅が1280未満では、画面幅に応じてサイズが小さくなるので、有効</p> -->
+        </div>
+        </div>
+      </li>
+      <li>
+        <h2>widthはvw指定、max-widthはpx指定</h2>
+        <div class="desc-wrapper">
+          <div class="square01 vw-px-square">90vw x 割合</div>
+          <div class="desc">
+            <!-- <p>指定はやや面倒だが、サイズは可変</p>
+            <p>画面幅に応じて変わるため、極端な画面幅になるとレイアウトが崩れる</p> -->
+        </div>
+        </div>
+      </li>
+      
+    </ul>
+  </section>
+</body>
+</html>
