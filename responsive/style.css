@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html{
-
-}
-
 body {
   margin: 0 auto;
   width: 100%;
@@ -38,6 +34,7 @@ body {
 
 .contents-wrapper h2 {
   text-align: center;
+  padding: 16px;
 }
 
 .responsive-header {
@@ -92,7 +89,9 @@ body {
 }
 
 .s02item {
-  width : 30vw;
+  width : calc( ((100vw - 100px) / 3) - 16px );
+  /* item間に8px（16px/2）の余白をとる */
+
   max-width: calc( 1180px * .3 );
 }
 
@@ -111,7 +110,8 @@ body {
 }
 
 .s03item {
-  width : calc( 100vw * .48 );
+  background: hsla( 60, 30%, 30%, .7);
+  width : calc( (100vw - 100px ) * .48 );
   max-width: calc( 1180px * .48 );
   display: flex;
   border: 1px dashed #333;
@@ -125,9 +125,68 @@ body {
   height : calc( 100vw * 100 / 1180 );
   max-height: 100px;
   object-fit: cover;
+  padding: 8px;
 }
 
 .s03item-desc {
   margin-left: 16px;
 }
 
+
+/*画面幅が1025px以上の場合（PC）に適用するCSSを記入*/
+@media screen and (min-width: 1025px) {
+
+}
+
+/*画面幅が1024px以下の場合（タブレット）に適用するCSSを記入*/
+@media screen and (max-width: 1024px) {
+
+}
+
+/*画面幅が767px以下の場合（スマホ）に適用するCSSを記入*/
+@media screen and (max-width: 767px) {
+  .contents-wrapper {
+    width: 90%;
+  }
+  .contents-wrapper h2 {
+    text-align: left;
+    padding: 16px;
+  }
+
+  .s01item {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  #responsive-sample01 img {
+    width: 100%;
+  }
+
+  .s02item-wrapper {
+    display: block;
+  }
+  
+  .s02item {
+    width: 100%;
+  }
+    
+  .s03item-wrapper {
+    display: block;
+  }
+  
+  .s03item {
+    background-image: url(img/river03.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;  
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    color: #fff;
+  }
+  
+  .s03item img {
+    display: none;
+  }
+  
+}
