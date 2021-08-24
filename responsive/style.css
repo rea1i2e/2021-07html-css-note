@@ -92,6 +92,7 @@ body {
   /* item間に8px（16px/2）の余白をとる */
 
   max-width: calc( 1180px * .3 );
+  /* これだと、354pxになる。スマホ表示で100%としたとき、これより大きくなるので、このmax-widthが適用されてしまう。スマホ版でも、max-width:100%すればよい。 */
 }
 
 .s02item img {
@@ -168,6 +169,7 @@ body {
   
   .s02item {
     width: 100%;
+    max-width: 100%;
   }
     
   .s03item-wrapper {
