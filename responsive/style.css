@@ -12,6 +12,10 @@ body {
   border: 5px solid pink;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 .contents-wrapper {
   width: calc( 100vw - 100px );
   max-width: 1180px;
@@ -139,6 +143,9 @@ body {
   margin-left: 16px;
 }
 
+#reference h2 {
+  text-align: left;
+}
 
 /*画面幅が1025px以上の場合（PC）に適用するCSSを記入*/
 @media screen and (min-width: 1025px) {
