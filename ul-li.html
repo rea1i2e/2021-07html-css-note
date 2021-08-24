@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul and li</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    
+  </head>
+  <body>
+    <div class="fixed-area">
+      <header>
+        <h1>ul and li</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">HTML・CSS noteに戻る</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div><!-- /.fixed-area -->
+    
+    <section class="contents-wrapper">
+      <h2>ul,li要素で階層を作る</h2>
+      <div class="desc-wrapper">
+        <p>ul,liを使ってはじめて階層を作ったとき、こう書いた</p>
+        <div class="result">結果→</div>
+        <div class="code-ex">
+        <pre>&lt;ul&gt;
+        &lt;li&gt;1&lt;/li&gt;
+        &lt;li&gt;
+        &lt;ul&gt;
+          &lt;li&gt;1-1&lt;/li&gt;
+          &lt;li&gt;1-2&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;2&lt;/li&gt;
+        &lt;li&gt;
+        &lt;ul&gt;
+          &lt;li&gt;2-1&lt;/li&gt;
+          &lt;li&gt;2-2&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;</pre>
+        </div>
+      </div>
+    <ul>
+      <li>1
+        <ul>
+          <li>1-1</li>
+          <li>1-2</li>
+        </ul>
+      </li>
+      <li>2
+        <ul>
+          <li>2-1</li>
+          <li>2-2</li>
+        </ul>
+      </li>
+    </ul>
+    <p>上記のような階層を作るとき、はじめこう書いてしまった</p>
+
+    <p>でも、正しくはこう書く</p>
+    <div class="code-ex">
+<pre>&lt;ul&gt;
+  &lt;li&gt;1
+    &lt;ul&gt;
+      &lt;li&gt;1-1&lt;/li&gt;
+      &lt;li&gt;1-2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;2
+    &lt;ul&gt;
+      &lt;li&gt;2-1&lt;/li&gt;
+      &lt;li&gt;2-2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+    </div>
+
+  </section>
+  
+  
+  
+</body>
+</html>

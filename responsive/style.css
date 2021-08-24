@@ -72,7 +72,6 @@ body {
 #responsive-sample01 img {
   width : 40vw;
   max-width: 472px;
-  height: fit-content;
 }
 
 .s01item-wrapper .s01item:nth-child(odd) .s01item-desc{
