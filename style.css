@@ -14,7 +14,7 @@ body {
   width: 100%;
   padding: 0 4%;
   z-index: 11;
-}  
+}
 
 header {
   /* background: pink; */
@@ -47,6 +47,13 @@ nav li {
   padding: 100px 4% 0;
 }
 
+
+.ex-bg {
+  background: #ddd;
+  width: fit-content;
+  padding: 4px 16px;
+}
+
 /* #reference ************************************* */
 #reference {
   min-height: calc( 100vh - 100px );
@@ -57,12 +64,20 @@ ul-li.html
 *************************************************** */
 .desc-wrapper {
   display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .result {
-
+  background: hsl( 120, 60%, 60%);
+  margin: 16px;
+  padding: 8px 16px;
+  height: fit-content;
 }
 
+.color-red {
+  color: red;
+}
 /* ***************************************************
 font.html
 *************************************************** */
@@ -362,13 +377,6 @@ float.html
   display: block;
   clear: both;
 }
-
-.code-ex {
-  background: #ddd;
-  width: fit-content;
-  padding: 4px 16px;
-}
-
 
 .box-wrapper {
   background:lime;
