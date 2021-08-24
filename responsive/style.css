@@ -70,8 +70,9 @@ body {
 }
 
 #responsive-sample01 img {
-  width : 40vw;
-  max-width: 472px;
+  /* width : 40vw; */
+  width: calc(512 * 100% / 1180 );
+  max-width: 512px;
 }
 
 .s01item-wrapper .s01item:nth-child(odd) .s01item-desc{
@@ -88,10 +89,12 @@ body {
 }
 
 .s02item {
-  width : calc( ((100vw - 100px) / 3) - 16px );
+  /* width : calc( ((100vw - 100px) / 3) - 16px ); */
   /* item間に8px（16px/2）の余白をとる */
+  width: 30%;
+  /* %指定なら、max-widthの指定は不要 */
 
-  max-width: calc( 1180px * .3 );
+  /* max-width: calc( 1180px * .3 ); */
   /* これだと、354pxになる。スマホ表示で100%としたとき、これより大きくなるので、このmax-widthが適用されてしまう。スマホ版でも、max-width:100%すればよい。 */
 }
 
@@ -160,6 +163,8 @@ body {
 
   #responsive-sample01 img {
     width: 100%;
+    max-width: 100%;
+    /* max-widthがないと、横並びのときの最大値が適用されてしまう。 */
   }
 
   .s02item-wrapper {
