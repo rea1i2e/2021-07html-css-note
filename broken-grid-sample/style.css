@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  max-width: 1920px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.contents-wrapper {
+  max-width: 1920px;
+}
+
+.item-wrapper {
+  display: flex;
+}
+
+.s02img {
+  width: 50%;
+}

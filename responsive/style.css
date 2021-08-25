@@ -28,8 +28,7 @@ ul {
 .first-view {
   background-image: url(img/first-view.jpg);
   width: 100%;
-  height: 100vh;
-  max-height: 1200px;
+  
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -79,7 +78,7 @@ ul {
 
 #responsive-sample01 img {
   /* width : 40vw; */
-  width: calc(512 * 100% / 1180 );
+  width: calc( ( 100vw - 100px ) * 512 / 1180 );
   max-width: 512px;
 }
 
@@ -131,9 +130,10 @@ ul {
 }
 
 .s03item img {
-  width : calc( 100vw * 100 / 1180 );
+  /* width : calc( 100vw * 100 / 1180 ); */
+  width : calc( ( 100vw - 100px ) * 100 / 1180 );
   max-width: 100px;
-  height : calc( 100vw * 100 / 1180 );
+  height : calc( ( 100vw - 100px ) * 100 / 1180 );
   max-height: 100px;
   object-fit: cover;
   padding: 8px;
