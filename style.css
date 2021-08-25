@@ -225,6 +225,27 @@ css-selector.html
   color: blue;
 }
 
+.sample-nav {
+  display: flex;
+  padding: 32px;
+  list-style: none;
+  background-color: hsl( 60, 60%, 60%);
+  width: fit-content;
+}
+
+.sample-nav li {
+  padding: 4px 8px;
+  background-color: hsl( 120, 60%, 60%);
+}
+
+.sample-nav01 li {
+  margin-left: 32px;
+}
+
+.not-first-child li:not(:first-child) {
+  margin-left: 32px;
+}
+
 /* **************************************************
 broken-grid.html
 ************************************************** */
