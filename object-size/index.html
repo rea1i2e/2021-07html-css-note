@@ -18,7 +18,7 @@
     <ul>
       
       <li>
-        <h2>px指定</h2>
+        <h2>1.px指定</h2>
         <div class="desc-wrapper">
           <div class="square01 px-square">295px</div>
           <div class="desc">
@@ -31,32 +31,48 @@
       </li>
       
       <li>
-        <h2>%指定</h2>
+        <h2>2.%指定</h2>
         <div class="desc-wrapper">
           <div class="square01 percent-square">25%</div>
           <div class="desc">
-            <!-- <p>幅は親要素の幅の25%を指定</p>
-            <p>高さは%指定できず、固定</p> -->
+            <p>
+              width: 25%;<br>
+              height:295px;<br>
+              親要素に対する割合で指定。<br>
+              幅の指定は比較的簡単だが、高さの指定は困難。<br>
+              正方形を作ることもできない。<br>
+              ここでは高さはpx指定とした。
+            </p>
         </div>
         </div>
       </li>
       <li>
-        <h2>vw指定</h2>
+        <h2>3.vw指定</h2>
         <div class="desc-wrapper">
           <div class="square01 vw-square">90vw x 割合</div>
           <div class="desc">
-            <!-- <p>画面幅が1280pxのとき、画面幅に応じて、サイズが大きくなってしまう</p>
-            <p>画面幅が1280未満では、画面幅に応じてサイズが小さくなるので、有効</p> -->
+            <p>
+              width: calc((100vw - 50px ) / 4 );<br>
+              height: calc((100vw - 50px ) / 4 );<br>
+              画面幅から余白分を引いた値に割合をかけている。<br>
+              高さに対しても、画面幅の単位（vw）を使えるので、正方形を作るなどアスペクト比を保つことができる。
+            </p>
         </div>
         </div>
       </li>
       <li>
-        <h2>widthはvw指定、max-widthはpx指定</h2>
+        <h2>4.widthはvw指定、max-widthはpx指定</h2>
         <div class="desc-wrapper">
           <div class="square01 vw-px-square">90vw x 割合</div>
           <div class="desc">
-            <!-- <p>指定はやや面倒だが、サイズは可変</p>
-            <p>画面幅に応じて変わるため、極端な画面幅になるとレイアウトが崩れる</p> -->
+            <p>
+              width: calc((100vw - 50px ) / 4 );<br>
+              max-width: 295px;<br>
+              height: calc((100vw - 50px ) / 4 );<br>
+              max-height: 295px;<br>
+              「3.」の指定に加えて、最大値を設定。<br>
+              途中までは画面幅に応じてサイズを大きくする。最大値になるとそれ以上大きくならない。
+            </p>
         </div>
         </div>
       </li>
