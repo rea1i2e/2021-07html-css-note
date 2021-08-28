@@ -149,19 +149,71 @@
     <ul>
       <li>デフォルトでは、０になっていることが多い（ブラウザによる）</li>
       <li>フォントサイズに応じて字間を決められるemの単位を使うと便利</li>
-      <li>1emとすると、1文字の高さ分の時間が空く</li>
+      <li>1emとすると、1文字の高さ分の字間が空く</li>
+      <li>デザイン通りのコーディングで、テキストと画像の余白の設定をする際、letter-spacingに注意が必要</li>
+    <li>letter-spacingは文字と文字の間だけでなく、文末にも存在する</li>
+    <li>デザイン通りに余白を空けるには、この文末の余白を考慮する必要がある</li>
     </ul>
     <p>letter-spacingはXDのAV項目（カーニング）の値を1,000で割り、計算後の数値に「em」をつければよい。</p>
     <dl>
       <dt>letter-spacing:0.18em</dt>
-      <dd class="font-ex ls018">石井花壇（６）</dd>
-      <dd>上記は、letter-spacing:0.18emとしています。</dd>
+        <dd class="font-ex ls018">石井花壇（６）</dd>
+        <dd>上記は、letter-spacing:0.18emとしています。</dd>
       
       <dt>letter-spacing:0.18em（フォントファミリーも指定）</dt>
-      <dd class="font-ex font-totsu ls018">石井花壇（7）</dd>
-      <dd>上記は、letter-spacing:0.18emとしています。</dd>
-      
+        <dd class="font-ex font-totsu ls018">石井花壇（7）</dd>
+        <dd>上記は、letter-spacing:0.18emとしています。</dd>
+
+      <dt>1.画像 + 16pxのmargin + テキスト </dt>
+        <dd>
+          <div class="letter-spacing-test-wrapper">
+            <img class="letter-spacing-test-img" src="img/library-of-congress-tqpsi_BPfCI-unsplash.jpg" alt="">
+            <p class="font64px">テキスト</p>
+          </div>
+        </dd>
+  
+      <dt>2.画像 + 16pxのmargin + テキスト（1emのletter-spacing）</dt>
+        <dd>「1.」の例とくらべて、画像とテキストの距離に差がない</dd>
+        <dd>
+          <div class="letter-spacing-test-wrapper">
+            <img class="letter-spacing-test-img" src="img/library-of-congress-tqpsi_BPfCI-unsplash.jpg" alt="">
+            <p class="font64px letter-spacing1em">テキスト</p>
+          </div>  
+        </dd>
+
+      <dt>3. テキスト + 16pxのmargin + 画像 </dt>
+        <dd>
+          <div class="letter-spacing-test-wrapper flex-direction-reverse">
+            <img class="letter-spacing-test-img" src="img/library-of-congress-tqpsi_BPfCI-unsplash.jpg" alt="">
+            <p class="font64px">テキスト</p>
+          </div>
+        </dd>
+  
+  <dt>4. テキスト（1emのletter-spacing） + 16pxのmargin + 画像 </dt>
+    <dd>
+      <p>「3.」の例とくらべて、画像とテキストの距離に差がある</p>
+      <div class="letter-spacing-test-wrapper flex-direction-reverse">
+        <img class="letter-spacing-test-img" src="img/library-of-congress-tqpsi_BPfCI-unsplash.jpg" alt="">
+        <p class="font64px letter-spacing1em">テキスト</p>
+      </div>
+    </dd>
+  
+  <dt>5. テキスト（1emのletter-spacing） + ( 16pxのmargin - letter-spacing分の幅 ) + 画像 </dt>
+    <dd>
+      <p>「3.」の例（下）とくらべて画像とテキストの距離に差がなくなった</p>
+      <div class="letter-spacing-test-wrapper flex-direction-reverse">
+        <img class="letter-spacing-test-img" src="img/library-of-congress-tqpsi_BPfCI-unsplash.jpg" alt="">
+        <p class="font64px letter-spacing1em fixed-margin">テキスト</p>
+      </div>
+      <div class="letter-spacing-test-wrapper flex-direction-reverse">
+        <img class="letter-spacing-test-img" src="img/library-of-congress-tqpsi_BPfCI-unsplash.jpg" alt="">
+        <p class="font64px">テキスト</p>
+      </div>
+    </dd>
+
     </dl>
+
+
   </section>
   
   <section id="line-height" class="contents-wrapper">

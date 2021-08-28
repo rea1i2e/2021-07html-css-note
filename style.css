@@ -182,6 +182,42 @@ font.html
   letter-spacing: .18em;
 }
 
+
+.letter-spacing-test-wrapper {
+  background: hsl(90, 50%, 50%);
+  display: flex;
+  width: 900px;
+  padding: 16px;
+  margin-bottom: 32px;
+}
+
+.letter-spacing-test-img {
+  width:64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+
+.font64px {
+  background: hsl(60, 50%, 50%);
+  font-size: 64px;
+  line-height: 1;
+  margin: 0 64px;
+}
+
+.letter-spacing1em {
+  letter-spacing: 1em;
+  letter-spacing: 64px;
+}
+
+.flex-direction-reverse {
+  flex-direction: row-reverse;
+}
+
+.fixed-margin {
+  margin-right: calc( 64px - 1em );
+}
+
 /* #line-height *********************************** */
 
 .line-height1 {
