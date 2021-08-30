@@ -535,6 +535,19 @@ centering.html
   vertical-align: middle;
 }
 
+.ls3em-centering {
+  text-align: center;
+  letter-spacing: 13em;
+  background: #ccc;
+}
+
+.ls3em-centering-fixed {
+  text-align: center;
+  letter-spacing: 13em;
+  background: #ccc;
+  padding-left: 13em;
+}
+
 /* ***************************************************
 p-width.html
 *************************************************** */

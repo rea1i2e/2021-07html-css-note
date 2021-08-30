@@ -15,6 +15,7 @@
       <h1>センタリング色々</h1>
       <nav>
         <ul>
+          <li><a href="#misalignment">センタリングのずれ</a></li>
           <li><a href="index.html">HTML・CSS noteに戻る</a></li>
         </ul>
       </nav>
@@ -35,6 +36,20 @@
     </div>
     <p>ただし、親要素でdisplay:flex;としている場合、この手は使えない。</p>
     <p>詳しくは<a href="display/">displayプロパティ</a>へ</p>
+  </section>
+
+  <section id="misalignment" class="contents-wrapper">
+    <h2>センタリングのずれ</h2>
+
+    <h3>letter-spacingによるずれ</h3>
+    <div class="ls3em-centering">文字列</div>
+    <p>センタリングしている文字列にletter-spacingを設定していると、ずれが生じる。<br>
+    これは、letter-spacingというプロパティが、文字と文字の間に空白ができるのではなく、文字の右側にのみ空白ができるため。</p>
+
+    <h3>letter-spacingによるずれを修正</h3>
+    <div class="ls3em-centering-fixed">文字列</div>
+    <p>ずれを修正するには、marginかpaddingで文字列の左側に余白を設定すればよい。<br>
+    上の例では、"letter-spacing: 13em;"としているので、"padding-left: 13em;"とすればよい</p>
   </section>
   
   
