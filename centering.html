@@ -24,14 +24,14 @@
 
   <section class="contents-wrapper">
     <h2>text-alingnによるX軸センタリング</h2>
-    <div class="text-align-wrapper">
+    <div class="text-align centering-wrapper">
       <p>text-alignによるセンタリングは、h1タグやpタグimgタグなどのインライン要素に指定できて、指定した親要素の中央に配置される</p>
     </div>
   </section>
   
   <section class="contents-wrapper">
     <h2>vertical-alingnによるY軸センタンリグ</h2>
-    <div class="vertical-align-wrapper">
+    <div class="vertical-align centering-wrapper">
       <p>h1タグやpタグimgタグなどのインライン要素を「vertical-align」でセンタリングするには、「display: table-cel;」とする</p>
     </div>
     <p>ただし、親要素でdisplay:flex;としている場合、この手は使えない。</p>
@@ -50,6 +50,60 @@
     <div class="ls3em-centering-fixed">文字列</div>
     <p>ずれを修正するには、marginかpaddingで文字列の左側に余白を設定すればよい。<br>
     上の例では、"letter-spacing: 13em;"としているので、"padding-left: 13em;"とすればよい</p>
+  </section>
+
+  <section class="contents-wrapper">
+    <h2>margin: 0 auto;によるX軸報告のセンタリング</h2>
+    <div class="centering-wrapper">
+      <div class="centering-box margin0auto">
+        margin: 0 auto;
+      </div>
+    </div>
+
+    <h2>margin: auto 0;によるY軸報告のセンタリング</h2>
+    <div class="centering-wrapper">
+      <div class="centering-box marginauto0">
+        margin: auto 0;
+      </div>
+    </div>
+    <p>これは上手くいかない。</p>
+
+    <h2>ul>liをmargin: 0 auto;でセンタリング</h2>
+    <div class="centering-wrapper">
+      <ul class="centering-ul">
+        <li>test1</li>
+        <li>test2</li>
+      </ul>
+    </div>
+    <p>ulの幅は親要素いっぱいに広がるので、センタリングできない。</p>
+
+    <h2>ul>liをmargin: 0 auto;でセンタリング（幅指定）</h2>
+    <div class="centering-wrapper">
+      <ul class="centering-ul fit-content">
+        <li>test1</li>
+        <li>test2</li>
+      </ul>
+    </div>
+    <p>ulの幅を指定すると、余白ができてセンタリングできる。</p>
+
+    <h2>ul>liをmargin: 0 auto;でセンタリング（縦書きul）</h2>
+    <div class="centering-wrapper">
+      <ul class="centering-ul vertical margin0auto">
+        <li>test1</li>
+        <li>test2</li>
+      </ul>
+    </div>
+    <p>ulを縦書きにすると、幅が自動的に決まるので、センタリングできる。</p>
+    <p>ところがFireFoxで表示すると、センタリングされない。</p>
+    
+        <h2>ul>liをflex-boxでセンタリング</h2>
+        <div class="centering-wrapper column justify">
+          <ul class="centering-ul vertical">
+            <li>test1</li>
+            <li>test2</li>
+          </ul>
+        </div>
+        <p>ulの親要素で、display: flex;とjustify-content: center;を指定するとFireFoxでもセンタリングできる。</p>
   </section>
   
   

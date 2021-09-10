@@ -145,10 +145,16 @@ font.html
   font-family: 'Toppan Bunkyu Midashi Mincho';
 }
 
+/* 石井花壇の課題のフォント + 'Toppan Bunkyu Midashi Mincho'を適用 */
+.many-font-family-plus {
+  font-family: 'Toppan Bunkyu Midashi Mincho', "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", 
+"ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
 /* 石井花壇の課題のフォントを適用 */
 .many-font-family {
-  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, 
-“ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", 
+"ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 
 .font-family-yumincho {
@@ -507,10 +513,9 @@ vertical-writing-mode.html
 .writing-mode-test {
   background: #aaa;
   width: 1000px;
-  writing-mode: vertical-rl;
 } 
 
-.btnvertical {
+.vertical {
   writing-mode: vertical-rl;
 }
 
@@ -519,19 +524,19 @@ vertical-writing-mode.html
 /* *************************************************
 centering.html
 ************************************************* */
-.text-align-wrapper {
+.centering-wrapper {
   background: rgb(238, 188, 51);
   width: 500px;
   height: 200px;
   padding: 24px;
+}
+
+.text-align {
   text-align: center;
 }
-.vertical-align-wrapper {
+
+.vertical-align {
   display: table-cell;
-  background: rgb(238, 188, 51);
-  width: 500px;
-  height: 200px;
-  padding: 24px;
   vertical-align: middle;
 }
 
@@ -546,6 +551,42 @@ centering.html
   letter-spacing: 13em;
   background: #ccc;
   padding-left: 13em;
+}
+
+.centering-box {
+  background:skyblue;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+
+.margin0auto {
+  margin: 0 auto;
+}
+
+.marginauto0 {
+  margin: auto 0;
+}
+
+.centering-ul {
+  background: hsl( 60, 60%, 60%);
+}
+
+.fit-content {
+  width:fit-content;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+.column {
+  display:flex;
+  /* flex-direction: column; */
+}
+
+.justify {
+  justify-content: center;
 }
 
 /* ***************************************************
