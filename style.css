@@ -157,16 +157,22 @@ font.html
 "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 
+
+
 .font-family-yumincho {
-  font-family: “游明朝体”;
+  font-family: "游明朝";
+}
+
+.font-family-yuminchotai {
+  font-family: "游明朝体";
 }
 
 .font-family-times-new-roman {
-  font-family: “Times New Roman”;
+  font-family: "Times New Roman";
 }
 
 .font-family-serif {
-  font-family: “serif”;
+  font-family: "serif";
 }
 
 .font-family-x {

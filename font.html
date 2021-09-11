@@ -86,43 +86,52 @@
     <h2>font-family</h2>
     <dl>
       <dt>font-family指定なし</dt>
-      <dd class="font-ex">石井花壇</dd>
-      <dd>上記を見本テキストとして、これにいろいろな指定をしていきます。
-      </dd>
+        <dd class="font-ex">石井花壇</dd>
+        <dd>上記を見本テキストとして、これにいろいろな指定をしていきます。</dd>
 
-      <dt>凸版文久見出し明朝</dt>
-      <dd class="font-ex font-totsu">石井花壇</dd>
-      <dd>上記は、「凸版文久見出し明朝」の例です。
-      </dd>
-   
-      <dt>凸版文久見出し明朝+たくさんのフォント指定</dt>
-      <dd class="font-ex font-totsu">石井花壇</dd>
-      <dd>上記は、「凸版文久見出し明朝」の例です。
-      </dd>
-   
+      <dt>凸版文久見出し明朝のみ指定</dt>
+        <dd class="font-ex font-totsu">石井花壇</dd>
+        <dd>Macでは指定が効いているが、Windowsでは効いていない。</dd>
+        
+      <dt>凸版文久見出し明朝+たくさんのフォント指定</dt>  
+        <dd class="font-ex many-font-family-plus">石井花壇</dd>
+        <dd>Macでは「凸版文久見出し明朝」になっていると思われるが、Windwosでは？</dd>
+        
+      <dt>たくさんのフォント指定</dt>  
+        <dd class="font-ex many-font-family">石井花壇</dd>
+        <dd>Macでは「游明朝体」になっていると思われる。Windwosでは</dd>
+        
+      <dt>游明朝指定</dt>  
+        <dd class="font-ex font-family-yumincho">石井花壇</dd>
+        <dd>Macでは指定が効いていない。Windowsでは</dd>
+        
+      <dt>游明朝体指定</dt>  
+        <dd class="font-ex font-family-yuminchotai">石井花壇</dd>
+        <dd>Macでは指定が効いている。Windowsでは</dd>
+        
       <dt>font-familyによる文字の横幅の違いを検証（指定なし）</dt>
-      <dd class="font-ex">12345678910</dd>
-      <dd>上記はfont-family指定なし</dd>
+        <dd class="font-ex">12345678910</dd>
+        <dd>上記はfont-family指定なし</dd>
 
       <dt>font-familyによる文字の横幅の違いを検証（たくさんのフォントを指定）</dt>
-      <dd class="font-ex many-font-family">12345678910</dd>
-      <dd>字幅が狭くなっている</dd>
+        <dd class="font-ex many-font-family">12345678910</dd>
+        <dd>字幅が狭くなっている</dd>
 
       <dt>font-familyによる文字の横幅の違いを検証（游明朝体）</dt>
-      <dd class="font-ex font-family-yumincho">12345678910</dd>
-      <dd>指定なしと同じように見える。游明朝体には数字のフォントの用意がないのかもしれない。</dd>
-      
+        <dd class="font-ex font-family-yumincho">12345678910</dd>
+        <dd>指定なしと同じように見える。游明朝体には数字のフォントの用意がないのかもしれない。</dd>
+        
       <dt>font-familyによる文字の横幅の違いを検証（Times New Roman）</dt>
-      <dd class="font-ex font-family-times-new-roman">12345678910</dd>
-      <dd>指定なしと同じように見える。游明朝体には数字のフォントの用意がないのかもしれない。</dd>
-      
+        <dd class="font-ex font-family-times-new-roman">12345678910</dd>
+        <dd>指定なしと同じように見える。游明朝体には数字のフォントの用意がないのかもしれない。</dd>
+        
       <dt>font-familyによる文字の横幅の違いを検証（"serif"）</dt>
-      <dd class="font-ex font-family-serif">12345678910</dd>
-      <dd>"serif"はフォントファミリー名ではなく、フォントの種類名なので、""で囲うと認識されない。指定しない場合と同様の結果になる。</dd>
+        <dd class="font-ex font-family-serif">12345678910</dd>
+        <dd>"serif"はフォントファミリー名ではなく、フォントの種類名なので、""で囲うと認識されない。指定しない場合と同様の結果になる。</dd>
 
       <dt>font-familyによる文字の横幅の違いを検証（serif）</dt>
-      <dd class="font-ex font-family-x">12345678910</dd>
-      <dd>”serif”ではなく、serifとするときちんと認識された</dd>
+        <dd class="font-ex font-family-x">12345678910</dd>
+        <dd>”serif”ではなく、serifとするときちんと認識された</dd>
 
     </dl>
 
